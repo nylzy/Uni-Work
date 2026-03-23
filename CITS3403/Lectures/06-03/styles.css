@@ -1,0 +1,57 @@
+body {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header {
+    color: aliceblue;
+    background-color: blue;
+    margin: 0%;
+    gap: 0%;
+    border: 0%;
+    padding: 3%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+.list-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.round-images {
+    border-radius: 20%;
+    max-width: fit-content;
+}
+
+
+.form-section {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
