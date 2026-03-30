@@ -11,10 +11,10 @@ Question 1 (1 mark)
 Explain the relationship between this problem and more abstract computer science topics covered in class.
 
 Part A – ChatGPT Answer:
-(Paste the ChatGPT-generated response here)
+(None)
 
 Part B – Your Answer:
-This problem is an application of ordered list operations, a core abstract topic in computer science. The leaderboard must remain sorted at all times to support efficient rank lookups, which maps directly to the problem of maintaining and searching sorted sequences. Specifically, it requires sorting an initial list (merge sort or insertion sort), inserting new elements into a sorted list (insertion sort), and finding positions or counts within that list (binary search). Each of these we have covered as 'abstract topics' in class, but require practical applications here.
+- This problem is an application of ordered list operations, a core abstract topic in computer science. The leaderboard must remain sorted at all times to support efficient rank lookups, which maps directly to the problem of maintaining and searching sorted sequences. Specifically, it requires sorting an initial list (merge sort or insertion sort), inserting new elements into a sorted list (insertion sort), and finding positions or counts within that list (binary search). Each of these we have covered as 'abstract topics' in class, but require practical applications here.
 
 
 
@@ -26,7 +26,7 @@ What data do you need to store in the Leaderboard class?
 What algorithm do you intend to use for each method?
 
 Part A – ChatGPT Answer:
-(Paste the ChatGPT-generated response here)
+(None)
 
 Part B – Your Answer:
 Data:
@@ -60,7 +60,7 @@ Question 4 (1 mark)
 Give an argument for the correctness and complexity of your **init**() function.
 
 Part A – ChatGPT Answer:
-(Paste the ChatGPT-generated response here)
+(None)
 
 Part B – Your Answer:
 - My implementation of __init__ utilises the merge sort algorithm to break the list of tuples down recursively into sub lists of either 1 or 0 elements and then remerges them in a sorted manner. Specifically this is implemented through the use of two helper functions that I created; _merge and _merge_sort. I did this to better demonstrate which components are taking which function.
@@ -76,7 +76,7 @@ Question 5 (1 mark)
 Give an argument for the correctness and complexity of your submit\_run() function.
 
 Part A – ChatGPT Answer:
-(Paste the ChatGPT-generated response here)
+(None)
 
 Part B – Your Answer:
 - My submit_run function uses binary search to find the correct insertion index, then inserts the new run at that position using list.insert(). The binary search works by maintaining a range [lo, hi] that narrows down to the correct position. At each step, the midpoint is compared to the new run — if the midpoint is smaller or equal, lo moves right past it; otherwise hi moves left to it. When the loop ends, lo and hi have converged to the same point where everything to the left is smaller and everything to the right is larger, guaranteeing the correct insertion point and maintaining sorted order.
@@ -91,7 +91,7 @@ Question 6 (1 mark)
 Give an argument for the correctness and complexity of your count\_time() function.
 
 Part A – ChatGPT Answer:
-(Paste the ChatGPT-generated response here)
+(None)
 
 Part B – Your Answer:
 - My count_time function uses two binary searches to find the left and right boundaries of all runs with the given time, then subtracts them to get the count. The left boundary finds the first index where the time is equal to the target, and the right boundary finds the first index where the time is greater than the target. Everything between these two boundaries must have exactly the target time, so right - left gives the correct count. This is correct because the list is always sorted, meaning all runs with the same time are guaranteed to be grouped together as a contiguous block, making the boundary approach valid.
