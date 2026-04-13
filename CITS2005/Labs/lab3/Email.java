@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Email {
     String subject;
     String sender;

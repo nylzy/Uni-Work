@@ -3,10 +3,19 @@ import java.util.ArrayList;
 public class EmailManager {
     ArrayList<Email> emails = new ArrayList<>();
 
+
+    /**
+     * Appends an email to an array of emails.
+     * 
+     * @param email an email (subject, sender, message and importance)
+     */
     public void addEmail(Email email) {
         emails.add(email);
     }
 
+    /**
+     * Prints all the emails in the emails array. 
+     */
     public void printEmails() {
         for (Email email: emails) {
             System.out.println("Subject: " + email.subject);
@@ -23,6 +32,9 @@ public class EmailManager {
             
     }
 
+    /**
+     * Prints all the emails that are flagged as important.
+     */
     public void printImportant() {
         ArrayList<Email> importantEmails = new ArrayList<>();
 
