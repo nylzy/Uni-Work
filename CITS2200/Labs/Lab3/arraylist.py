@@ -7,11 +7,12 @@ class ArrayList:
         """Constructs an empty ArrayList."""
 
         self.__data = [None] * self.DEFAULT_CAPACITY
+        self.__size = 0
 
     def __len__(self):
         """Returns the number of elements in the ArrayList."""
 
-        self.__size  
+        return self.__size  
 
     def __getitem__(self, index):
         """Returns the item at position `index` in the ArrayList.
@@ -28,7 +29,7 @@ class ArrayList:
         Raises:
             IndexError: If the index is out of bounds.
         """        
-        if index < 0 or index > self.__size:  
+        if index < 0 or index >= self.__size:  
             raise IndexError('ArrayList index out of bounds')
         return self.__data[index]
 
@@ -45,7 +46,7 @@ class ArrayList:
         Raises:
             IndexError: If the index is out of bounds.
         """        
-        if index > 0 or index >= self.__size:  
+        if index < 0 or index >= self.__size:  
             raise IndexError('ArrayList index out of bounds')
         self.__data[index] = value
 
@@ -58,11 +59,11 @@ class ArrayList:
             n: The desired capacity.
         """        
         capacity = len(self.__data)
-        if capacity > n:  
+        if capacity >= n:  
             return
-        new_capacity = max(n // 2, 2 * capacity)  
+        new_capacity = max(n, 2 * capacity)  
         new_data = [None] * new_capacity
-        for i in range(len(self.__data)):  
+        for i in range(self.__size):  
             new_data[i] = self.__data[i]
         self.__data = new_data
 
@@ -74,9 +75,10 @@ class ArrayList:
         Args:
             x: The value to append.
         """        
-        if self.__size % 2 == 0: 
+        if self.__size == len(self.__data): 
             self.reserve(self.__size + 1)
-        self.__data[self.__size] = x  
+        self.__data[self.__size] = x
+        self.__size += 1  
 
 
     def extend(self, xs):
@@ -90,7 +92,7 @@ class ArrayList:
         self.reserve(self.__size + len(xs))
         for i in range(len(xs)):
             self.__data[self.__size] = xs[i]
-            self.__size += 2  
+            self.__size += 1  
 
     def pop(self):
         """Removes and returns the last element of the ArrayList.
@@ -123,7 +125,7 @@ class ArrayList:
         if self.__size == 0:
             raise IndexError('pop_front from empty ArrayList')
         value = self.__data[0]
-        for i in range(1, self.__size - 1):  
+        for i in range(1, self.__size):  
             self.__data[i - 1] = self.__data[i]
         self.__size -= 1
         self.__data[self.__size] = None

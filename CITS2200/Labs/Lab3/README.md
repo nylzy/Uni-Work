@@ -13,7 +13,7 @@ Tutorials – for guided explanations and examples.
 
 Task 1 
 
- `arraylist.py` will likely use Python `list`, in order to model a fixed-size array you are not allowed to use any list operations that would cause a list to change size. Once you have created a list, it must remain the same length at all times.You may, however, construct a new list of a different size and discard the old one.
+ `arraylist.py` will likely use Python `list`, in order to model a fixed-size array you are not allowed to use any list operations that would cause a list to change size. Once you have created a list, it must remain the same length at all times. You may, however, construct a new list of a different size and discard the old one.
 
 
 Instructions for the Lab: Fix the Broken ArrayList
@@ -31,7 +31,7 @@ __len__	  Missing return	Python returns None → len() fails	Add return self.__s
 
 Task 2 
 
-Implement a hash map by implementing all the function subts in `hashmap.py`.
+Implement a hash map by implementing all the function stubs in `hashmap.py`.
 It should be obvious that your implementation may not use a Python `dict`.
 
 Complexity targets for some methods are included in their doc comments.
