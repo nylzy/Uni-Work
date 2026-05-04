@@ -1,8 +1,8 @@
 # CITS2200 Lab 2: Genealogy
 
-Name: YOUR NAME
+Name: Thomas Graham Nylund 
 
-Student Number: 23XXXXXX
+Student Number: 22708177
 
 
 ## Question 1 (1 mark)

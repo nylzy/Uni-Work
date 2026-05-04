@@ -1,5 +1,5 @@
-# Name: YOUR NAME
-# Student Number: 23XXXXXX
+# Name: THOMAS GRAHAM NYLUND
+# Student Number: 22708177
 
 class Genealogy:
 
