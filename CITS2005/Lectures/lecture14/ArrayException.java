@@ -20,5 +20,7 @@ public class ArrayException {
 }
 
 /* Notes:
-- try blocks can have multiple catch 
+- try blocks can have multiple catch statements within them
+- we can create our own exception cases by extending 'Exception'
+- Exceptions inherit from 'throwables'
 */
