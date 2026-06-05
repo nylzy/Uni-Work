@@ -9,7 +9,7 @@ public class StringStack {
     }
 
     public void push(String s) {
-        if (top < data.length()) {
+        if (top < data.length) {
             data[top] = s;
             top += 1;
         } else {
@@ -21,7 +21,7 @@ public class StringStack {
     public String pop() {
         if (top > 0) {
             top -= 1;
-            return data[top + 1];
+            return data[top];
         } else {
             return "The stack is empty";
         }
@@ -31,7 +31,8 @@ public class StringStack {
         StringStack ss = new StringStack(5);
         ss.push("Hello");
         ss.push("World");
-        ss.pop();
-        ss.pop();
+        System.out.println(ss.pop());
+        System.out.println(ss.pop());
+        System.out.println(ss.pop());
     }
 }
